@@ -26,7 +26,7 @@ TARGET_PRODUCT_SHORT := $(subst voltage_,,$(VOLTAGE_BUILD))
 
 ifeq ($(VOLTAGE_BUILD_TYPE), OFFICIAL)
 
-  OFFICIAL_DEVICES_LIST := $(shell /usr/bin/curl -sLk --connect-timeout 5 https://raw.githubusercontent.com/VoltageOS/vendor_voltage/16/voltage.devices)
+  OFFICIAL_DEVICES_LIST := $(shell /usr/bin/curl -sLk --connect-timeout 5 https://raw.githubusercontent.com/voltageos-oneplus9/vendor_voltage/16/voltage.devices)
 
   ifeq ($(strip $(OFFICIAL_DEVICES_LIST)),)
     $(error Failed to download the official devices list. Please check your network connection.)
